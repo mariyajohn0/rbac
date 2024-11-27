@@ -1,0 +1,212 @@
+/* General Styling for the Users Page */
+.users-page {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Universal Button Styling (applies to all buttons) */
+button {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4CAF50; /* Set the same color for all buttons */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* Hover color */
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #1c5d8a; /* Active color */
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* User List Styling */
+.user-list {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.user-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-list th, .user-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-list th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.user-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styles for User Actions */
+.user-list .actions button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Removing specific button styles (edit, delete, status) since they now share the same style */
+.user-list .actions .edit-btn,
+.user-list .actions .delete-btn,
+.user-list .actions .status-btn {
+  background-color: #4CAF50; /* Same color for all buttons */
+  color: white;
+}
+
+.user-list .actions button:hover {
+  background-color: #45a049; /* Hover color */
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.modal button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50; /* Same color for modal buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal button:hover {
+  background-color: #45a049; /* Hover color */
+}
+
+.modal button.cancel-btn {
+  background-color: #4CAF50; /* Same color for cancel button */
+}
+
+.modal button.cancel-btn:hover {
+  background-color: #45a049; /* Hover color */
+}
+
+/* Responsive Design */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  .users-page {
+      padding: 15px;
+  }
+
+  .users-page h1 {
+      font-size: 1.8rem;
+  }
+
+  .user-list {
+      padding: 10px;
+  }
+
+  .user-list table {
+      font-size: 12px;
+  }
+
+  .modal-content {
+      padding: 20px;
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .users-page h1 {
+      font-size: 1.5rem;
+  }
+
+  .users-page button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  .modal input {
+      font-size: 13px;
+  }
+
+  .modal button {
+      padding: 8px;
+      font-size: 14px;
+  }
+}
